@@ -17,18 +17,12 @@ import javax.swing.JScrollPane;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.Font;
-
 public class PRoject2 {
-
 	private JFrame frame;
 	private JTextField pname;
 	private JTextField vaccines;
 	private JTextField age;
 	private JTextField txtpid;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -53,17 +47,11 @@ public class PRoject2 {
 	      e.printStackTrace();
 	   } 
 	     }
-
-	/**
-	 * Create the application.
-	 */
 	public PRoject2() {
 		initialize();
 		Connect();
 		table_load();
 	}
-
-
 Connection con;
  PreparedStatement pst;
  ResultSet rs;
@@ -71,7 +59,6 @@ Connection con;
  private JTextField textpname;
  private JTextField costtake;
  private JTextField Costset;
-	
 	public void Connect()
     {
         try {
@@ -88,52 +75,40 @@ Connection con;
         }
 
     }
-	
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 381);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 58, 209, 135);
 		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
+		panel.setLayout(null);		
 		JLabel lblNewLabel_1 = new JLabel("Name/id");
 		lblNewLabel_1.setForeground(Color.MAGENTA);
 		lblNewLabel_1.setBounds(10, 27, 46, 14);
-		panel.add(lblNewLabel_1);
-		
+		panel.add(lblNewLabel_1);		
 		JLabel lblNewLabel_1_1 = new JLabel("Vaccines");
 		lblNewLabel_1_1.setForeground(Color.BLUE);
 		lblNewLabel_1_1.setBounds(10, 52, 70, 14);
-		panel.add(lblNewLabel_1_1);
-		
+		panel.add(lblNewLabel_1_1);		
 		JLabel lblNewLabel_1_2 = new JLabel("Age");
 		lblNewLabel_1_2.setForeground(Color.RED);
 		lblNewLabel_1_2.setBounds(10, 72, 46, 14);
-		panel.add(lblNewLabel_1_2);
-		
+		panel.add(lblNewLabel_1_2);		
 		pname = new JTextField();
 		pname.setBounds(100, 24, 86, 20);
 		panel.add(pname);
-		pname.setColumns(10);
-		
+		pname.setColumns(10);		
 		vaccines = new JTextField();
 		vaccines.setBounds(100, 49, 86, 20);
 		panel.add(vaccines);
-		vaccines.setColumns(10);
-		
+		vaccines.setColumns(10);		
 		age = new JTextField();
 		age.setForeground(Color.RED);
 		age.setBounds(100, 69, 86, 20);
 		panel.add(age);
-		age.setColumns(10);
-		
+		age.setColumns(10);	
 		JButton btnNewButton = new JButton("Save");
 		btnNewButton.setForeground(Color.RED);
 		btnNewButton.addActionListener(new ActionListener() {
