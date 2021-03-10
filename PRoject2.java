@@ -2,6 +2,7 @@ import java.sql.*;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
@@ -19,6 +20,7 @@ import java.awt.event.KeyEvent;
 import java.awt.Font;
 public class PRoject2 {
 	private JFrame frame;
+	
 	private JTextField pname;
 	private JTextField vaccines;
 	private JTextField age;
@@ -37,6 +39,7 @@ public class PRoject2 {
 	}
 	  public void table_load()
 	     {
+		  
 	      try 
 	      {
 	     pst = con.prepareStatement("select * from patient_table");
@@ -52,9 +55,11 @@ public class PRoject2 {
 		Connect();
 		table_load();
 	}
+	
 Connection con;
  PreparedStatement pst;
  ResultSet rs;
+	
  private JTextField txtWelcomeToOur;
  private JTextField textpname;
  private JTextField costtake;
@@ -67,6 +72,7 @@ Connection con;
         }
         catch (ClassNotFoundException ex) 
         {
+		
           ex.printStackTrace();
         }
         catch (SQLException ex) 
@@ -77,6 +83,7 @@ Connection con;
     }
 	private void initialize() {
 		frame = new JFrame();
+		
 		frame.setBounds(100, 100, 450, 381);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -93,6 +100,7 @@ Connection con;
 		lblNewLabel_1_1.setBounds(10, 52, 70, 14);
 		panel.add(lblNewLabel_1_1);		
 		JLabel lblNewLabel_1_2 = new JLabel("Age");
+		
 		lblNewLabel_1_2.setForeground(Color.RED);
 		lblNewLabel_1_2.setBounds(10, 72, 46, 14);
 		panel.add(lblNewLabel_1_2);		
