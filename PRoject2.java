@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -27,6 +28,7 @@ public class PRoject2 {
 	private JTextField age;
 	private JTextField txtpid;
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -59,6 +61,7 @@ public class PRoject2 {
 	
 Connection con;
  PreparedStatement pst;
+	
  ResultSet rs;
 	
  private JTextField txtWelcomeToOur;
